@@ -1,0 +1,122 @@
+[
+  {
+    "Name": "Classic FizzBuzz",
+    "Author": "Traditional",
+    "Rules": [
+      {
+        "Divisor": 3,
+        "Word": "Fizz"
+      },
+      {
+        "Divisor": 5,
+        "Word": "Buzz"
+      }
+    ],
+    "MinValue": 1,
+    "MaxValue": 100
+  },
+  {
+    "Name": "FooBooLoo",
+    "Author": "Alex",
+    "Rules": [
+      {
+        "Divisor": 7,
+        "Word": "Foo"
+      },
+      {
+        "Divisor": 11,
+        "Word": "Boo"
+      },
+      {
+        "Divisor": 103,
+        "Word": "Loo"
+      }
+    ],
+    "MinValue": 1,
+    "MaxValue": 500
+  },
+  {
+    "Name": "Math Master",
+    "Author": "Professor Smith",
+    "Rules": [
+      {
+        "Divisor": 2,
+        "Word": "Even"
+      },
+      {
+        "Divisor": 3,
+        "Word": "Triple"
+      },
+      {
+        "Divisor": 5,
+        "Word": "Fiver"
+      },
+      {
+        "Divisor": 7,
+        "Word": "Lucky"
+      }
+    ],
+    "MinValue": 1,
+    "MaxValue": 200
+  },
+  {
+    "Name": "Simple Double",
+    "Author": "Beginner",
+    "Rules": [
+      {
+        "Divisor": 4,
+        "Word": "Double"
+      },
+      {
+        "Divisor": 9,
+        "Word": "Square"
+      }
+    ],
+    "MinValue": 1,
+    "MaxValue": 50
+  },
+  {
+    "Name": "Prime Time",
+    "Author": "MathGeek",
+    "Rules": [
+      {
+        "Divisor": 2,
+        "Word": "Two"
+      },
+      {
+        "Divisor": 3,
+        "Word": "Three"
+      },
+      {
+        "Divisor": 5,
+        "Word": "Five"
+      },
+      {
+        "Divisor": 7,
+        "Word": "Seven"
+      },
+      {
+        "Divisor": 11,
+        "Word": "Eleven"
+      }
+    ],
+    "MinValue": 1,
+    "MaxValue": 150
+  },
+  {
+    "Name": "Weekend Warrior",
+    "Author": "GameMaster",
+    "Rules": [
+      {
+        "Divisor": 6,
+        "Word": "Weekend"
+      },
+      {
+        "Divisor": 13,
+        "Word": "Unlucky"
+      }
+    ],
+    "MinValue": 1,
+    "MaxValue": 100
+  }
+]

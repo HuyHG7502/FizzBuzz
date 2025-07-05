@@ -1,0 +1,57 @@
+services:
+  db:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: FizzBuzzDb
+    ports:
+      - "5432:5432"
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  api:
+    build:
+      context: ./FizzBuzz.Backend
+      dockerfile: Dockerfile
+    container_name: fizzbuzz-api
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: http://+:8080
+      ASPNETCORE_HTTPS_PORTS: 8080
+      ConnectionStrings__DefaultConnection: Host=db;Database=FizzBuzzDb;Username=postgres;Password=password
+    ports:
+      - "8080:8080"
+    depends_on:
+      db:
+        condition: service_healthy
+
+  ui:
+    build:
+      context: ./FizzBuzz.Frontend
+      dockerfile: Dockerfile
+      target: development
+    container_name: fizzbuzz-ui
+    environment:
+      NODE_ENV: development
+      NEXT_PUBLIC_API_URL: http://api:8080
+      PORT: 3000
+      WATCHPACK_POLLING: true
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./FizzBuzz.Frontend:/app
+      - /app/node_modules
+      - /app/.next
+    depends_on:
+      - api
+    command: npm run dev
+
+volumes:
+  db_data:
