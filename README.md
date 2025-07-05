@@ -135,3 +135,32 @@ To stop and remove containers:
 ```sh
 docker compose down
 ```
+
+---
+
+## 🚧 Future Enhancements
+
+We have many ideas to make FizzBuzz Arena even more powerful and fun! Here are some planned or potential enhancements:
+
+### 1. Game History & User Profiles
+
+- **User Accounts:** Allow users to register, log in, and manage their profiles.
+- **Game History:** Track and display each user’s played games, scores, and performance over time.
+- **Leaderboards:** Show top players, speed rounds, and most popular games.
+- **Shareable Game Links:** Let users share custom games with friends.
+
+### 2. Advanced Rule Engine (Beyond "Divisible By")
+
+- **Flexible Rule Types:** Support rules based on other number properties, such as:
+  - Contains digit (e.g., "contains 3")
+  - Is a palindrome
+  - Is a prime number
+  - Is a perfect square/cube
+  - Custom expressions (e.g., "sum of digits is 7", "digits map to colours")
+- **Strategy Pattern for Rules:**  
+  Refactor the backend rule logic to use the **Strategy Pattern**, allowing each rule type to be implemented as a separate strategy class. This will make it easy to add new rule types and keep the codebase maintainable and extensible.
+
+---
+
+**Have an idea?**  
+Feel free to open an issue or contribute a feature!
